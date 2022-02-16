@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b6063682-66bb-4114-9b09-caedff028e1f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM tb_vote]]>
+	</queryString>
+	<field name="idVote" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idCalon" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_mahasiswa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="idVote">
+		<groupExpression><![CDATA[$F{idVote}]]></groupExpression>
+	</group>
+	<group name="idCalon">
+		<groupExpression><![CDATA[$F{idCalon}]]></groupExpression>
+	</group>
+	<group name="id_mahasiswa">
+		<groupExpression><![CDATA[$F{id_mahasiswa}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="142" y="23" width="293" height="56" uuid="dc9fba2c-6f85-4d07-bb35-59264bf4ef96"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Hasil Pemilu ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="42" y="15" width="100" height="20" uuid="48a5b24f-f808-499c-a9db-690350cb51b3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id Vote]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="15" width="100" height="20" uuid="8ccd9df9-6bb0-416f-8127-0267b62b39a9"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id Calon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="15" width="100" height="20" uuid="314c1358-0ea1-4929-a96f-3438edc02e28"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[id Mahasiswa]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="186" splitType="Stretch">
+			<textField>
+				<reportElement x="42" y="25" width="100" height="20" uuid="3f3575db-a8e8-4703-8f27-ad3173e853e2"/>
+				<textFieldExpression><![CDATA[$F{idVote}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="244" y="25" width="100" height="20" uuid="892c645b-bf16-4b6e-827b-3fc32657b683"/>
+				<textFieldExpression><![CDATA[$F{idCalon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="25" width="100" height="20" uuid="fbe7cbc3-a8a4-41da-ab8a-1c5425fb2119"/>
+				<textFieldExpression><![CDATA[$F{id_mahasiswa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
